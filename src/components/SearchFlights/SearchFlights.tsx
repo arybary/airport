@@ -27,7 +27,7 @@ const SearchFlights: React.FC = () => {
     flightsSeachValue(value);
     flightsDirection(direction);
     getFlightsData(date);
-  }, [date, direction, value]);
+  }, [date, direction, flightsDirection, flightsSeachValue, getFlightsData, value]);
 
   const resetParam = () => {
     flightsParamReset();

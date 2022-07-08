@@ -39,7 +39,7 @@ export const flightsParamReset = (): FlightsAction => {
 };
 
 export const getFlightsData = (date: string) => {
-  if (date === undefined) {
+  if (date === '') {
     return;
   }
   return async function (dispatch: Dispatch<FlightsAction>) {
