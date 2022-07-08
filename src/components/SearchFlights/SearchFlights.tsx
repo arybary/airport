@@ -35,7 +35,7 @@ const SearchFlights: React.FC = () => {
 
   return (
     <>
-      <div className="search__header">SEARCH FLIGHT KIEV Sykorsky Airport</div>
+      <div className="search__header">SEARCH_FLIGHT KIEV Sykorsky Airport</div>
       <FilterFlights />
       <div>
         <ButtonFlightDirection direction={"departure"} />
