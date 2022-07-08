@@ -28,7 +28,7 @@ const ChoiceFlightDate: React.FC = () => {
         type="date"
         onChange={(e) => handleClick(e.target.valueAsDate)}
       />
-      <div>
+      <div className="dates__days">
         {days.map((day, i) => {
           const { date, title } = day;
           const classDayActive =
