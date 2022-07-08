@@ -1,6 +1,4 @@
 /** @format */
-
-import moment from "moment";
 import {
   FlightsAction,
   FlightsActionTypes,
