@@ -1,0 +1,23 @@
+/** @format */
+
+.button-direction {
+  border: none;
+  background: #1eb7ee;
+  color: aliceblue;
+  border-radius: 25px 50px 0 0;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  height: 50px;
+  width: 50%;
+  outline: none;
+  &:hover {
+    border-radius: 25px 25px 0 0;
+    background: #1eb6ee44;
+  }
+}
+.active {
+  background: #fff;
+  color: #1eb6ee6c;
+  border-radius: 50px 25px 0 0;
+}

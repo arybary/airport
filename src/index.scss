@@ -1,0 +1,21 @@
+/** @format */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  background-color: #9ea0a24f;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
