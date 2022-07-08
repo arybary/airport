@@ -1,8 +1,8 @@
 /** @format */
 
+import moment from "moment";
 import { createSelector } from "reselect";
 import { RootState } from "./store";
-
 export const fligthDataSelector = (state: RootState) =>
   state.flights.flightsData;
 
@@ -23,7 +23,7 @@ export const fligthsList = createSelector(
       terminal: data.term,
       time: data.actual,
       destination: data["airportToID.name_en"] || data["airportFromID.name_en"],
-      status: data.status,
+      status: `${data.status} to ${moment(data.timeTakeofFact).format("LT")}`,
       airline: data.airline,
       code: data.codeShareData[0].codeShare,
     }));

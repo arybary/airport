@@ -9,9 +9,9 @@ import {
 
 const initData: FlightsState = {
   flightsData: { departure: [], arrival: [] },
-  direction: "departure",
+  direction: "",
   value: "",
-  date: moment().format("DD-MM-YYYY"),
+  date: "",
 };
 
 const flightsReduser = (
@@ -24,21 +24,12 @@ const flightsReduser = (
         ...state,
         flightsData: action.payload,
       };
-    case FlightsActionTypes.FLIGHTS_DIRECTION:
+    case FlightsActionTypes.FLIGHTS_PARAMS:
       return {
         ...state,
-        direction: action.payload,
+        ...action.payload,
       };
-    case FlightsActionTypes.FLIGHTS_SEACH_VALUE:
-      return {
-        ...state,
-        value: action.payload,
-      };
-    case FlightsActionTypes.FLIGHTS_DATE:
-      return {
-        ...state,
-        date: action.payload,
-      };
+
     case FlightsActionTypes.FLIGHTS_RESET:
       return initData;
 

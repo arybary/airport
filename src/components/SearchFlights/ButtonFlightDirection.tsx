@@ -6,11 +6,11 @@ import "./ButtonFlightDirection.scss";
 
 const moment = require("moment");
 
-interface Props {
+interface PropsDirection {
   direction: string;
 }
 
-const ButtonFlightDirection: React.FC<Props> = ({ direction }) => {
+const ButtonFlightDirection: React.FC<PropsDirection> = ({ direction }) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const value = searchParams.get("value") || "";

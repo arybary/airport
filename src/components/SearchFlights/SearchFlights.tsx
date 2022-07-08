@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useActions } from "../../store/useActions";
 import ButtonFlightDirection from "./ButtonFlightDirection";
@@ -15,30 +15,22 @@ const SearchFlights: React.FC = () => {
   const date = searchParams.get("date") || "";
   const value = searchParams.get("value") || "";
 
-  const {
-    getFlightsData,
-    flightsSeachValue,
-    flightsDirection,
-    flightsParamReset,
-  } = useActions();
+  const { getFlightsData,flightsParam, flightsParamReset } = useActions();
+
 
   useEffect(() => {
-    if (date === "") return;
-    flightsSeachValue(value);
-    flightsDirection(direction);
-    getFlightsData(date);
-  }, [
-    date,
-    direction,
-    flightsDirection,
-    flightsSeachValue,
-    getFlightsData,
-    value,
-  ]);
+    if(date==='') return;
+    
+    getFlightsData();
+  },[date, getFlightsData]);
+  useMemo(() => {
+    flightsParam(date, direction, value);
+  }, [date, value, direction, flightsParam]);
 
   const resetParam = () => {
     flightsParamReset();
     setSearchParams({ date: "", direction: "", value: "" });
+    window.location.reload();
   };
 
   return (

@@ -28,23 +28,25 @@ const ChoiceFlightDate: React.FC = () => {
         type="date"
         onChange={(e) => handleClick(e.target.valueAsDate)}
       />
-      {days.map((day, i) => {
-        const { date, title } = day;
-        const classDayActive =
-          dateActive === date.format("DD-MM-YYYY") ? "active" : "";
-        return (
-          <div
-            key={i}
-            onClick={() => handleClick(day.date)}
-            className={`dates__day ${classDayActive}`}
-          >
-            <span className="dates__day-title">
-              {date.format("dddd DD/MM")}
-            </span>
-            <p>{title}</p>
-          </div>
-        );
-      })}
+      <div>
+        {days.map((day, i) => {
+          const { date, title } = day;
+          const classDayActive =
+            dateActive === date.format("DD-MM-YYYY") ? "active" : "";
+          return (
+            <div
+              key={i}
+              onClick={() => handleClick(day.date)}
+              className={`dates__day ${classDayActive}`}
+            >
+              <span className="dates__day-title">
+                {date.format("dddd DD/MM")}
+              </span>
+              <p>{title}</p>
+            </div>
+          );
+        })}
+      </div>
       {dateActive && (
         <>
           <div className="dates__title">{dateActive}</div>

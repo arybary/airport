@@ -1,6 +1,5 @@
 /** @format */
 
-import React from "react";
 import { fligthsList } from "../../../store/flights.selectors";
 import { useTypedSelector } from "../../../store/useTypedSelector";
 import RowFlight from "./RowFlight";

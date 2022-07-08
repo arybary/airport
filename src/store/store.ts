@@ -1,12 +1,18 @@
 /** @format */
 
-import { createStore, applyMiddleware, combineReducers, compose } from "redux";
+import {
+  createStore,
+  applyMiddleware,
+  combineReducers,
+  compose,
+  Middleware,
+} from "redux";
 import thunk from "redux-thunk";
 import flightsReduser from "./flights.reducer";
 
 const rootReduser = combineReducers({ flights: flightsReduser });
 
-const logger = (state: any) => (next: any) => (action: any) => {
+const logger: Middleware<{}, RootState> = (state) => (next) => (action) => {
   console.group(action.type);
   console.info("dispatching", action);
   let result = next(action);
