@@ -24,14 +24,17 @@ const SearchFlights: React.FC = () => {
 
   useEffect(() => {
     if (date === "") return;
-
-    getFlightsData(date);
-  }, [date, getFlightsData]);
-
-  useEffect(() => {
     flightsSeachValue(value);
     flightsDirection(direction);
-  }, [direction, flightsDirection, flightsSeachValue, value]);
+    getFlightsData(date);
+  }, [
+    date,
+    direction,
+    flightsDirection,
+    flightsSeachValue,
+    getFlightsData,
+    value,
+  ]);
 
   const resetParam = () => {
     flightsParamReset();
@@ -40,7 +43,7 @@ const SearchFlights: React.FC = () => {
 
   return (
     <>
-      <div className="search__header">SEARCH huy FLIGHT KIEV Sykorsky Airport</div>
+      <div className="search__header">SEARCH FLIGHT KIEV Sykorsky Airport</div>
       <FilterFlights />
       <div>
         <ButtonFlightDirection direction={"departure"} />

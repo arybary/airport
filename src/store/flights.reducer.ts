@@ -1,5 +1,6 @@
 /** @format */
 
+import moment from "moment";
 import {
   FlightsAction,
   FlightsActionTypes,
@@ -10,7 +11,7 @@ const initData: FlightsState = {
   flightsData: { departure: [], arrival: [] },
   direction: "departure",
   value: "",
-  date: "",
+  date: moment().format("DD-MM-YYYY"),
 };
 
 const flightsReduser = (
