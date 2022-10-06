@@ -2,6 +2,7 @@
 
 # [Airoport_link](https://dulcet-macaron-a756e1.netlify.app/)
 <b style="color:red">!!! there are no flights from February 23, therefore, to check the functions, select a date earlier than February 23, 2022</b>
+<font color="red">Это какой-то текст!</font>
 
 ## Available Scripts
 
