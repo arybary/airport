@@ -1,4 +1,4 @@
-<b style="background:red">!!! there are no flights from February 23, therefore, to check the functions, select a date earlier than February 23, 2022</b>
+<b>!!! there are no flights from February 23, therefore, to check the functions, select a date earlier than February 23, 2022</b>
 
 # [Airoport_link](https://dulcet-macaron-a756e1.netlify.app/)
 
