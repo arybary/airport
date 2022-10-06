@@ -1,8 +1,7 @@
-/** @format */
-
 import React from "react";
 import { useSearchParams } from "react-router-dom";
-import "./ChoiceFlightDate.scss";
+import "./DateFlight.scss";
+
 const moment = require("moment");
 
 const days = [
@@ -11,7 +10,7 @@ const days = [
   { title: "tomorrow", date: moment().add(1, "d") },
 ];
 
-const ChoiceFlightDate: React.FC = () => {
+const DateFlight: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const value = searchParams.get("value") || "";
   const direction = searchParams.get("direction") || "departure";
@@ -56,4 +55,4 @@ const ChoiceFlightDate: React.FC = () => {
   );
 };
 
-export default ChoiceFlightDate;
+export default DateFlight;

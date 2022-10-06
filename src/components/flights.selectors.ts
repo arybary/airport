@@ -1,8 +1,7 @@
-/** @format */
-
 import moment from "moment";
 import { createSelector } from "reselect";
-import { RootState } from "./store";
+import { RootState } from "../store";
+
 export const fligthDataSelector = (state: RootState) =>
   state.flights.flightsData;
 

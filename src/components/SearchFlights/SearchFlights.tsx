@@ -1,10 +1,8 @@
-/** @format */
-
 import React, { useEffect, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
-import { useActions } from "../../store/useActions";
-import ButtonFlightDirection from "./ButtonFlightDirection";
-import ChoiceFlightDate from "./ChoiceFlightDate";
+import { useActions } from "../useActions";
+import DirectionFlight from "./DirectionFlight";
+import DateFlight from "./DateFlight";
 import FilterFlights from "./FilterFlights";
 import "./SearchFlights.scss";
 import TableFlights from "./TableFlights/TableFlights";
@@ -23,6 +21,7 @@ const SearchFlights: React.FC = () => {
     
     getFlightsData();
   },[date, getFlightsData]);
+
   useMemo(() => {
     flightsParam(date, direction, value);
   }, [date, value, direction, flightsParam]);
@@ -38,10 +37,10 @@ const SearchFlights: React.FC = () => {
       <div className="search__header">SEARCH_FLIGHT KIEV Sykorsky Airport</div>
       <FilterFlights />
       <div>
-        <ButtonFlightDirection direction={"departure"} />
-        <ButtonFlightDirection direction={"arrival"} />
+        <DirectionFlight direction={"departure"} />
+        <DirectionFlight direction={"arrival"} />
       </div>
-      <ChoiceFlightDate />
+      <DateFlight />
       {date && (
         <>
           <div className="search__clear">

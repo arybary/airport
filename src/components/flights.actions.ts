@@ -1,10 +1,7 @@
-/** @format */
-
 import axios from "axios";
 import { Dispatch } from "react";
-
 import { FlightsAction, FlightsActionTypes } from "./flights.type";
-import { RootState } from "./store";
+import { RootState } from "../store";
 
 export const flightsDataRecieved = (flightsData: any): FlightsAction => {
   return {

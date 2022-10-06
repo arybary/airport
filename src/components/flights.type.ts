@@ -1,5 +1,3 @@
-/** @format */
-
 export interface FlightsState {
   flightsData: any;
   direction: string;

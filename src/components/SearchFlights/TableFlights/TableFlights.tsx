@@ -1,7 +1,5 @@
-/** @format */
-
-import { fligthsList } from "../../../store/flights.selectors";
-import { useTypedSelector } from "../../../store/useTypedSelector";
+import { fligthsList } from "../../flights.selectors";
+import { useTypedSelector } from "../../useTypedSelector";
 import RowFlight from "./RowFlight";
 import "./TableFlights.scss";
 

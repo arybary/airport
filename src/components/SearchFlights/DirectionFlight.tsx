@@ -1,16 +1,14 @@
-/** @format */
-
 import React from "react";
 import { useSearchParams } from "react-router-dom";
-import "./ButtonFlightDirection.scss";
+import "./DirectionFlight.scss";
 
 const moment = require("moment");
 
 interface PropsDirection {
-  direction: string;
+  direction: string
 }
 
-const ButtonFlightDirection: React.FC<PropsDirection> = ({ direction }) => {
+const DirectionFlight: React.FC<PropsDirection> = ({ direction }) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const value = searchParams.get("value") || "";
@@ -33,4 +31,4 @@ const ButtonFlightDirection: React.FC<PropsDirection> = ({ direction }) => {
   );
 };
 
-export default ButtonFlightDirection;
+export default DirectionFlight;
