@@ -1,8 +1,7 @@
-
+<b style="color:red">!!! there are no flights from February 23, therefore, to check the functions, select a date earlier than February 23, 2022</b>
 
 # [Airoport_link](https://dulcet-macaron-a756e1.netlify.app/)
-<b style="color:red">!!! there are no flights from February 23, therefore, to check the functions, select a date earlier than February 23, 2022</b>
-<font color="red">Это какой-то текст!</font>
+
 
 ## Available Scripts
 
@@ -46,5 +45,18 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-# airport
-# airport
+
+### The tech stack is:
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [Sass (Scss)](https://sass-lang.com/)
+- [BEM methodology](https://en.bem.info/methodology/)
+- [TypeScript](https://ru.wikipedia.org/wiki/TypeScript)
+- [frontend tools](http://frontendtools.com/)
+- [Webpack](https://ru.wikipedia.org/wiki/Webpack)
+- [REACT](https://ru.wikipedia.org/wiki/React)
+- [REDUX](https://redux.js.org/)
+
+
+Author: Medvid Rostislav
